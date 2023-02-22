@@ -1,7 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, FlatList, Button } from 'react-native';
+import { Weather, WEATHER_DATA } from "./data/stub";
+import InfosJour from "./components/InfosJour";
 
-export default function App(){
+export default function App() {
   return (
     <View style={styles.container}>
       <Text>Hello, I'm your app ! ^_^</Text>
@@ -16,7 +17,6 @@ export default function App(){
       <View style={styles.button}>
         <Button title="Plus"/>
       </View>
-        </View>
       <StatusBar style="auto" />
     <SafeAreaView style={styles.container}>
         <TabTempHeure/>
@@ -24,19 +24,13 @@ export default function App(){
     </SafeAreaView>
       <DayWheather/>
     </View>
-
-    <SafeAreaView style={styles.container}>
-        <TabTempHeure/>
-        <Semaine/>
-    </SafeAreaView>
-
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#AAA',
+    backgroundColor: '#b7e6f7',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -50,6 +44,4 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     borderRadius: 8,
   },
-
-  }
 });
