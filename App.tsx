@@ -1,24 +1,35 @@
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View, Appearance, Button } from 'react-native';
-import { Float } from 'react-native/Libraries/Types/CodegenTypes';
-import {TabTempHeure} from "./Component/TabTempHeure";
-import {Semaine} from "./Component/Semaine";
-
-import HomeScreen from "./screens/HomeScreen";
-import {CITIES_DATA} from "./data/stub";
-
-import React from 'react'
-
-
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function App(){
   return (
+    <View style={styles.container}>
+      <Text>Hello, I'm your app ! ^_^</Text>
+      <Text>And I'm really</Text>
+      <View style={styles.beauty}>
+        <Text>BEAUTIFUL</Text>
+      </View>
+      {/*<FlatList data={WEATHER_DATA} renderItem={({item}) =>
+        <InfosJour item={item}/>
+      }}*/}
+      <FlatList data={WEATHER_DATA} renderItem={InfosJour}/>
+      <View style={styles.button}>
+        <Button title="Plus"/>
+      </View>
+        </View>
+      <StatusBar style="auto" />
+    <SafeAreaView style={styles.container}>
+        <TabTempHeure/>
+        <Semaine/>
+    </SafeAreaView>
+      <DayWheather/>
+    </View>
 
     <SafeAreaView style={styles.container}>
         <TabTempHeure/>
         <Semaine/>
     </SafeAreaView>
-   
+
   );
 }
 
@@ -26,12 +37,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#AAA',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  beauty: {
+    backgroundColor: '#AAF',
+  },
+  block: {
+    backgroundColor: 'grey',
+  },
+  button: {
+    backgroundColor: 'blue',
+    borderRadius: 8,
+  },
 
   }
 });
-
-
-
-
-
-
