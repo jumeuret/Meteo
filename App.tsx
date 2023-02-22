@@ -1,5 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, FlatList, Button } from 'react-native';
+import { Weather, WEATHER_DATA } from "./data/stub";
+import InfosJour from "./components/InfosJour";
 
 export default function App() {
   return (
@@ -8,8 +9,14 @@ export default function App() {
       <Text>And I'm really</Text>
       <View style={styles.beauty}>
         <Text>BEAUTIFUL</Text>
-        </View>
-      <StatusBar style="auto" />
+      </View>
+      {/*<FlatList data={WEATHER_DATA} renderItem={({item}) =>
+        <InfosJour item={item}/>
+      }}*/}
+      <FlatList data={WEATHER_DATA} renderItem={InfosJour}/>
+      <View style={styles.button}>
+        <Button title="Plus"/>
+      </View>
     </View>
   );
 }
@@ -17,11 +24,18 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#AAA',
+    backgroundColor: '#b7e6f7',
     alignItems: 'center',
     justifyContent: 'center',
   },
   beauty: {
     backgroundColor: '#AAF',
+  },
+  block: {
+    backgroundColor: 'grey',
+  },
+  button: {
+    backgroundColor: 'blue',
+    borderRadius: 8,
   },
 });
