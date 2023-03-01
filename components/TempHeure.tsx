@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { Float } from "react-native/Libraries/Types/CodegenTypes";
 import { WEATHER_DATA} from "../data/stub"
 
-export const TempHeure: React.FC<{}> = props => {
+export default function TempHeure() {
   const tempHeures:Array<number> = new Array(7);
 
   return (

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { Float } from "react-native/Libraries/Types/CodegenTypes";
 import { WEATHER_DATA} from "../data/stub";
-import { TempHeure} from "./TempHeure"
+import TempHeure from "./TempHeure";
 
 
 type Day = {
@@ -10,12 +10,12 @@ type Day = {
   tempMoyenne : Float;
 }
 
-export const TabTempHeure: React.FC<{}> = props => {
+export default function TabTempHeure() {
   const tempHeures:Array<number> = new Array(7);
 
   return (
     <View style={TabTempHeureStyle.container}> 
-      <ScrollView horizontal={true} style={ TabTempHeureStyle.ScrollView}> 
+      <ScrollView horizontal={true} style={TabTempHeureStyle.ScrollView}> 
         {tempHeures.fill(0).map((_,i)=>
             <TempHeure key={i} />
         )}
@@ -34,7 +34,6 @@ const TabTempHeureStyle = StyleSheet.create({
     ScrollView : {
       borderColor: 'black',
       borderTopLeftRadius: 30,
-      margin : 10,
     },
     
   });
