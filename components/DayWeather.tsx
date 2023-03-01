@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { Float } from "react-native/Libraries/Types/CodegenTypes";
-import { WEATHER_DATA_Lyon_D1} from "../data/stub";
+import { WEATHER_DATA_Lyon_D1} from "../data/stubLyon";
 
 // export function recuperationTempHeure() : string[] {
 //   let tab : string[] = []
@@ -10,7 +10,9 @@ import { WEATHER_DATA_Lyon_D1} from "../data/stub";
 export default function DayWeather() {
   return (
     <View style={dayWeatherStyle.container}> 
-      <Text style={dayWeatherStyle.border1}> Lundi</Text>
+      <View style={dayWeatherStyle.border}>
+        <Text> Lundi</Text>
+      </View>
       <View style={dayWeatherStyle.border}>
         <Text> Température moyenne </Text>
         <Text> 14°C </Text>
@@ -33,11 +35,9 @@ const dayWeatherStyle = StyleSheet.create({
       borderColor : 'black',
       borderWidth: 1,
       padding : 10,
+      height : 70,
+      justifyContent:"center"
     },
-    border1: {
-      borderColor : 'black',
-      borderWidth: 1,
-      padding : 20,
-    }
+  
   });
 

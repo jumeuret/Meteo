@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { Float } from "react-native/Libraries/Types/CodegenTypes";
-import { Weather, WEATHER_DATA_Lyon_D1} from "../data/stub";
+import { WEATHER_DATA_Lyon_D1} from "../data/stubLyon";
 import  TabTempHeure  from "./TabTempHeure";
 
 

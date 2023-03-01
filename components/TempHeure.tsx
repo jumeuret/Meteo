@@ -19,7 +19,6 @@ const tempHeureStyle = StyleSheet.create({
       backgroundColor: '#DFD3C3',
       borderColor : 'black',
       borderWidth: 3,
-      padding : 10,
     }
   });
 

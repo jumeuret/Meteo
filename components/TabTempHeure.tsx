@@ -15,7 +15,7 @@ export default function TabTempHeure() {
 
   return (
     <View style={TabTempHeureStyle.container}> 
-      <ScrollView horizontal={true} style={TabTempHeureStyle.ScrollView}> 
+      <ScrollView horizontal={true}> 
         {tempHeures.fill(0).map((_,i)=>
             <TempHeure key={i} />
         )}
@@ -27,14 +27,8 @@ export default function TabTempHeure() {
 const TabTempHeureStyle = StyleSheet.create({
     container : {
       justifyContent : 'center',
-      alignItems: 'baseline',
       display: "flex",
       margin: 10,
-    },
-    ScrollView : {
-      borderColor: 'black',
-      borderTopLeftRadius: 30,
-    },
-    
+    }   
   });
 
