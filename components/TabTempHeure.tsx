@@ -26,14 +26,19 @@ export default function TabTempHeure() {
   
 const TabTempHeureStyle = StyleSheet.create({
     container : {
-      justifyContent : 'center',
-      alignItems: 'baseline',
-      display: "flex",
-      margin: 10,
+        justifyContent : 'center',
+        alignItems: 'baseline',
+        display: "flex",
+        margin: 10,
+        borderColor : 'black',
+        borderTopWidth: 5,
+        borderBottomWidth: 5,
+        borderEndWidth: 2.5,
+        borderStartWidth: 2.5,
+        borderRadius: 5,
     },
     ScrollView : {
-      borderColor: 'black',
-      borderTopLeftRadius: 30,
+        borderColor: 'black',
     },
     
   });

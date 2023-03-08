@@ -25,19 +25,19 @@ export default function DayWeather() {
   
 const dayWeatherStyle = StyleSheet.create({
     container : {
-      alignItems: 'flex-start',
-      display: "flex",
-      flexDirection : "row",
+        alignItems: 'flex-start',
+        display: "flex",
+        flexDirection : "row",
     },
     border: {
-      borderColor : 'black',
-      borderWidth: 1,
-      padding : 10,
+        borderColor : 'black',
+        borderWidth: 1,
+        padding : 10,
     },
     border1: {
-      borderColor : 'black',
-      borderWidth: 1,
-      padding : 20,
+        borderColor : 'black',
+        borderEndWidth: 1,
+        padding : 20,
     }
   });
 

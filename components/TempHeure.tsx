@@ -8,7 +8,7 @@ export default function TempHeure() {
 
   return (
     <View style={tempHeureStyle.container}> 
-        <Text> heure : 7h</Text>
+        <Text> Heure : 7h</Text>
         <Text> Température : 20°C </Text>
     </View>
   );
@@ -16,10 +16,11 @@ export default function TempHeure() {
   
 const tempHeureStyle = StyleSheet.create({
     container : {
-      backgroundColor: '#DFD3C3',
-      borderColor : 'black',
-      borderWidth: 3,
-      padding : 10,
+        backgroundColor: '#DFD3C3',
+        borderColor : 'black',
+        borderEndWidth: 2.5,
+        borderStartWidth: 2.5,
+        padding : 10,
     }
   });
 

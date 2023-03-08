@@ -21,10 +21,9 @@ export default function Semaine() {
   
 const semaineStyle = StyleSheet.create({
     container : {
-      flex : 1,
-      marginTop: 10,
-      padding : 10,
-      alignItems : "center"
+        flex : 1,
+        alignItems : "center",
+        borderWidth: 2,
     }
   });
 
