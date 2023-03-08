@@ -203,6 +203,13 @@ export const WEATHER_DATA: Weather[] = [
   
 ];
 
+export const PERIODES = [
+    "Actuelle",
+    "Matin",
+    "Midi",
+    "Soir"
+]
+
 export const WEATHER_DATA_Lyon_D1: Weather[] = [
   new Weather("2023-01-22 23:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,

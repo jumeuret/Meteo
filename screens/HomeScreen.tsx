@@ -1,17 +1,14 @@
 import { StyleSheet, Text, View, ScrollView, FlatList } from 'react-native';
 import TabTempHeure from "../components/TabTempHeure";
 import Semaine from "../components/Semaine";
-import {WEATHER_DATA_Lyon_D1} from "../data/stub"
+import {WEATHER_DATA_Lyon_D1, PERIODES} from "../data/stub"
 import InfosJour from "../components/InfosJour";
+import {recuperationTemp} from "../components/CarreMillieu";
 
 export default function HomeScreen() {
   return (
     <View style={stylesHome.container}>
-        <FlatList
-            data={WEATHER_DATA_Lyon_D1}
-            renderItem={({item}) => <InfosJour meteo={item} />}
-            keyExtractor={item => item.at}
-        />
+        <InfosJour meteo={recuperationTemp(WEATHER_DATA_Lyon_D1, WEATHER_DATA_Lyon_D1[0].city)} periodes={PERIODES}/>
       <TabTempHeure/>
       <Semaine/>
     </View>
