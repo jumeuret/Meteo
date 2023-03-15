@@ -1,5 +1,5 @@
 import {View, Text, StyleSheet} from "react-native";
-import { Weather, WEATHER_DATA } from "./../data/stub";
+
 type InfosProps = {
   time: string;
   value: number;

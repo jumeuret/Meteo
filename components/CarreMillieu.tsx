@@ -4,7 +4,10 @@ import { Float } from "react-native/Libraries/Types/CodegenTypes";
 import { WEATHER_DATA_Lyon_D1} from "../data/stubLyon";
 import  TabTempHeure  from "./TabTempHeure";
 
-
+/**
+ * Fonction qui recupère la température associé au 3 moments clés de la journée, à savoir 6h le matin, 12 h le midi et 19h le soir.
+ * @returns {Map<string, number>} - Une map contenant en clé le moment de la journée et en valeur la température qui lui est associée
+ */
 export function recuperationTempHeure() :  Map<string, number>{
   let TabTempHeure = new Map<string, number>();
   for (let i=0; i< WEATHER_DATA_Lyon_D1.length ; i++){

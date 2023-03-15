@@ -1,5 +1,5 @@
-import {City} from "./stub";
-import {Weather} from "./stub";
+import City from "../class/City";
+import Weather from "../class/Weather";
 
 
 export const WEATHER_DATA_Paris_D1: Weather[] = [

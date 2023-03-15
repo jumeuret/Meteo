@@ -1,6 +1,5 @@
-import {City} from "./stub";
-import {Weather} from "./stub";
-
+import City from "../class/City";
+import Weather from "../class/Weather";
 
 export const WEATHER_DATA_Lyon_D1: Weather[] = [
     new Weather("2023-01-22 23:55:59", 10000, "Nuageux",

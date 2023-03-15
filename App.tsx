@@ -2,11 +2,12 @@ import { StyleSheet, Text, View, FlatList, Button, SafeAreaView } from 'react-na
 import { Weather, WEATHER_DATA } from "./data/stub";
 import InfosJour from "./components/InfosJour";
 import HomeScreen from "./screens/HomeScreen";
+import StackNavigation from "./navigation/Navigation"
 
 export default function App() {
   return (  
     <SafeAreaView style={styles.container}>
-      <HomeScreen/>
+      <StackNavigation/>
     </SafeAreaView>
   );
 }

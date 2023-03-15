@@ -1,144 +1,60 @@
-export class City {
-  private _name: string;
-  private _latitude: number;
-  private _longitude: number;
+import * as  stubBruxelles from "./stubBruxelles";
+import * as stubLyon from "./stubLyon";
+import * as stubParis from "./stubParis";
+import * as stubMarseille from "./stubMarseille";
+import * as stubClermont from "./stubClermont";
+import Weather from "../class/Weather";
+import City from "../class/City";
 
-  constructor(name: string, latitude: number, longitude: number) {
-    this._name = name;
-    this._latitude = latitude;
-    this._longitude = longitude;
-  }
+export const tabClermont : Weather[][] = [
+  stubClermont.WEATHER_DATA_Clermont_D1, 
+  stubClermont.WEATHER_DATA_Clermont_D2, 
+  stubClermont.WEATHER_DATA_Clermont_D3, 
+  stubClermont.WEATHER_DATA_Clermont_D4, 
+  stubClermont.WEATHER_DATA_Clermont_D5, 
+  stubClermont.WEATHER_DATA_Clermont_D6, 
+  stubClermont.WEATHER_DATA_Clermont_D7
+];
 
-  get name(): string {
-    return this._name;
-  }
+export const tabLyon : Weather[][] = [
+  stubLyon.WEATHER_DATA_Lyon_D1, 
+  stubLyon.WEATHER_DATA_Lyon_D2, 
+  stubLyon.WEATHER_DATA_Lyon_D3, 
+  stubLyon.WEATHER_DATA_Lyon_D4, 
+  stubLyon.WEATHER_DATA_Lyon_D5, 
+  stubLyon.WEATHER_DATA_Lyon_D6, 
+  stubLyon.WEATHER_DATA_Lyon_D7
+];
 
-  set name(value: string) {
-    this._name = value;
-  }
+export const tabBruxelles : Weather[][] = [
+  stubBruxelles.WEATHER_DATA_Bruxelles_D1, 
+  stubBruxelles.WEATHER_DATA_Bruxelles_D2, 
+  stubBruxelles.WEATHER_DATA_Bruxelles_D3, 
+  stubBruxelles.WEATHER_DATA_Bruxelles_D4, 
+  stubBruxelles.WEATHER_DATA_Bruxelles_D5, 
+  stubBruxelles.WEATHER_DATA_Bruxelles_D6, 
+  stubBruxelles.WEATHER_DATA_Bruxelles_D7
+];
 
-  get latitude(): number {
-    return this._latitude;
-  }
+export const tabParis : Weather[][] = [
+  stubParis.WEATHER_DATA_Paris_D1, 
+  stubParis.WEATHER_DATA_Paris_D2, 
+  stubParis.WEATHER_DATA_Paris_D3, 
+  stubParis.WEATHER_DATA_Paris_D4, 
+  stubParis.WEATHER_DATA_Paris_D5, 
+  stubParis.WEATHER_DATA_Paris_D6, 
+  stubParis.WEATHER_DATA_Paris_D7
+];
 
-  set latitude(value: number) {
-    this._latitude = value;
-  }
-
-  get longitude(): number {
-    return this._longitude;
-  }
-
-  set longitude(value: number) {
-    this._longitude = value;
-  }
-}
-
-export class Weather {
-  private _at: string;
-  private _visibility: number;
-  private _weatherType: string;
-  private _weatherDescription: string;
-  private _temperature: number;
-  private _temperatureFeelsLike: number;
-  private _humidity: number;
-  private _windSpeed: number;
-  private _pressure: number;
-  private _city: City;
-
-  constructor(at: string, visibility: number, weatherType: string, weatherDescription: string, temperature: number, temperatureFeelsLike: number, humidity: number, windSpeed: number, pressure: number, city: City) {
-    this._at = at;
-    this._visibility = visibility;
-    this._weatherType = weatherType;
-    this._weatherDescription = weatherDescription;
-    this._temperature = temperature;
-    this._temperatureFeelsLike = temperatureFeelsLike;
-    this._humidity = humidity;
-    this._windSpeed = windSpeed;
-    this._pressure = pressure;
-    this._city = city;
-  }
-
-  get at(): string {
-    return this._at;
-  }
-
-  set at(value: string) {
-    this._at = value;
-  }
-
-  get visibility(): number {
-    return this._visibility;
-  }
-
-  set visibility(value: number) {
-    this._visibility = value;
-  }
-
-  get weatherType(): string {
-    return this._weatherType;
-  }
-
-  set weatherType(value: string) {
-    this._weatherType = value;
-  }
-
-  get weatherDescription(): string {
-    return this._weatherDescription;
-  }
-
-  set weatherDescription(value: string) {
-    this._weatherDescription = value;
-  }
-
-  get temperature(): number {
-    return this._temperature;
-  }
-
-  set temperature(value: number) {
-    this._temperature = value;
-  }
-
-  get temperatureFeelsLike(): number {
-    return this._temperatureFeelsLike;
-  }
-
-  set temperatureFeelsLike(value: number) {
-    this._temperatureFeelsLike = value;
-  }
-
-  get humidity(): number {
-    return this._humidity;
-  }
-
-  set humidity(value: number) {
-    this._humidity = value;
-  }
-
-  get windSpeed(): number {
-    return this._windSpeed;
-  }
-
-  set windSpeed(value: number) {
-    this._windSpeed = value;
-  }
-
-  get pressure(): number {
-    return this._pressure;
-  }
-
-  set pressure(value: number) {
-    this._pressure = value;
-  }
-
-  get city(): City {
-    return this._city;
-  }
-
-  set city(value: City) {
-    this._city = value;
-  }
-}
+export const tabMarseille : Weather[][] = [
+  stubMarseille.WEATHER_DATA_Marseille_D1, 
+  stubMarseille.WEATHER_DATA_Marseille_D2, 
+  stubMarseille.WEATHER_DATA_Marseille_D3, 
+  stubMarseille.WEATHER_DATA_Marseille_D4, 
+  stubMarseille.WEATHER_DATA_Marseille_D5, 
+  stubMarseille.WEATHER_DATA_Marseille_D6, 
+  stubMarseille.WEATHER_DATA_Marseille_D7
+];
 
 export const CITIES_DATA: City[] = [
   new City("Paris", 48.866667, 2.333333),
