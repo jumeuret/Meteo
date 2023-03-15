@@ -10,7 +10,7 @@ export default function Infos(props: InfosProps) {
     <View>
       <View style={styles.block}>
         <Text>{props.time}</Text>
-        <Text style={styles.button}>{props.value}</Text>
+        <Text style={styles.valeur}>{props.value} °C</Text>
       </View>
     </View>
   )
@@ -18,10 +18,15 @@ export default function Infos(props: InfosProps) {
 
 const styles = StyleSheet.create({
     block: {
-        backgroundColor: 'grey',
+        backgroundColor: '#DFD3C3',
+        alignItems: 'center',
+        display: "flex",
+        margin: 10,
     },
-    button: {
-        backgroundColor: 'blue',
-        borderRadius: 8,
+    valeur: {
+        backgroundColor: 'grey',
+        borderRadius: 12,
+        alignItems: "center",
+        padding: 5,
     },
 });

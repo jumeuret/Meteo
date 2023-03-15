@@ -1,3 +1,5 @@
+import {MoonPhase} from "../modele/MoonPhase";
+
 export class City {
   private _name: string;
   private _latitude: number;
@@ -45,8 +47,9 @@ export class Weather {
   private _windSpeed: number;
   private _pressure: number;
   private _city: City;
+  private _moon: MoonPhase;
 
-  constructor(at: string, visibility: number, weatherType: string, weatherDescription: string, temperature: number, temperatureFeelsLike: number, humidity: number, windSpeed: number, pressure: number, city: City) {
+  constructor(at: string, visibility: number, weatherType: string, weatherDescription: string, temperature: number, temperatureFeelsLike: number, humidity: number, windSpeed: number, pressure: number, city: City, moon: MoonPhase) {
     this._at = at;
     this._visibility = visibility;
     this._weatherType = weatherType;
@@ -57,6 +60,7 @@ export class Weather {
     this._windSpeed = windSpeed;
     this._pressure = pressure;
     this._city = city;
+    this._moon = moon;
   }
 
   get at(): string {
@@ -138,6 +142,14 @@ export class Weather {
   set city(value: City) {
     this._city = value;
   }
+
+  get moon(){
+    return this._moon;
+  }
+
+  set moon(value: MoonPhase) {
+    this._moon = value;
+  }
 }
 
 export const CITIES_DATA: City[] = [
@@ -158,47 +170,47 @@ export const WEATHER_DATA: Weather[] = [
   new Weather("2023-01-22 09:55:59", 10000, "Nuageux",
     "couvert", 0.52, -4.34,
     82, 5.14, 1032,
-    new City("Paris", 48.866667, 2.333333)
+    new City("Paris", 48.866667, 2.333333), MoonPhase.PremierQuartier
   ),
   new Weather("2023-01-22 09:55:59", 10000, "Nuageux",
     "couvert", 0.52, -4.34,
     82, 5.14, 1032,
-    new City("Clermont-Ferrand", 45.777222, 3.087025)
+    new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.PremierCroissant
   ),
   new Weather("2023-01-22 09:55:59", 10000, "Nuageux",
     "couvert", 0.52, -4.34,
     82, 5.14, 1032,
-    new City("Lyon", 45.764043, 4.835659)
+    new City("Lyon", 45.764043, 4.835659), MoonPhase.PremierQuartier
   ),
   new Weather("2023-01-22 09:55:59", 10000, "Nuageux",
     "couvert", 0.52, -4.34,
     82, 5.14, 1032,
-    new City("Marseille", 43.296482, 5.36978)
+    new City("Marseille", 43.296482, 5.36978), MoonPhase.PremierQuartier
   ),
   new Weather("2023-01-22 09:55:59", 10000, "Nuageux",
     "couvert", 0.52, -4.34,
     82, 5.14, 1032,
-    new City("Bruxelles", 50.85034, 4.35171)
+    new City("Bruxelles", 50.85034, 4.35171), MoonPhase.PremierQuartier
   ),
   new Weather("2023-01-22 09:55:59", 10000, "Nuageux",
     "couvert", 0.52, -4.34,
     82, 5.14, 1032,
-    new City("Bruxelles", 50.85034, 4.35171)
+    new City("Bruxelles", 50.85034, 4.35171), MoonPhase.PremierQuartier
   ),
   new Weather("2023-01-22 09:55:59", 10000, "Nuageux",
     "couvert", 0.52, -4.34,
     82, 5.14, 1032,
-    new City("Bruxelles", 50.85034, 4.35171)
+    new City("Bruxelles", 50.85034, 4.35171), MoonPhase.PremierQuartier
   ),
   new Weather("2023-01-22 09:55:59", 10000, "Nuageux",
     "couvert", 0.52, -4.34,
     82, 5.14, 1032,
-    new City("Bruxelles", 50.85034, 4.35171)
+    new City("Bruxelles", 50.85034, 4.35171), MoonPhase.PremierQuartier
   ),
   new Weather("2023-01-22 09:55:59", 10000, "Nuageux",
     "couvert", 0.52, -4.34,
     82, 5.14, 1032,
-    new City("Bruxelles", 50.85034, 4.35171)
+    new City("Bruxelles", 50.85034, 4.35171), MoonPhase.PremierQuartier
   ),
   
 ];
@@ -214,137 +226,137 @@ export const WEATHER_DATA_Lyon_D1: Weather[] = [
   new Weather("2023-01-22 23:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
   new Weather("2023-01-22 22:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
   new Weather("2023-01-22 21:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
   new Weather("2023-01-22 20:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
   new Weather("2023-01-22 19:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
   new Weather("2023-01-22 18:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
   new Weather("2023-01-22 17:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
   new Weather("2023-01-22 16:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
 
   new Weather("2023-01-22 15:55:59", 10000, "Nuageux",
     "couvert", 0.52, -4.34,
     82, 5.14, 1032,
-    new City("Lyon", 45.764043, 4.835659)
+    new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
 
   new Weather("2023-01-22 14:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
 
   new Weather("2023-01-22 13:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
   new Weather("2023-01-22 12:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
 
   new Weather("2023-01-22 11:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
 
   new Weather("2023-01-22 10:55:59", 10000, "Nuageux",
     "couvert", 0.52, -4.34,
     82, 5.14, 1032,
-    new City("Lyon", 45.764043, 4.835659)
+    new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
 
   new Weather("2023-01-22 9:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
 
   new Weather("2023-01-22 8:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
 
   new Weather("2023-01-22 7:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
 
   new Weather("2023-01-22 6:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
 
   new Weather("2023-01-22 5:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
 
   new Weather("2023-01-22 4:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
 
   new Weather("2023-01-22 3:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
 
   new Weather("2023-01-22 2:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
 
   new Weather("2023-01-22 1:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
 
   new Weather("2023-01-22 0:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Lyon", 45.764043, 4.835659)
+  new City("Lyon", 45.764043, 4.835659), MoonPhase.GibbeuseDecroissante
   ),
 ];
 
@@ -352,137 +364,137 @@ export const WEATHER_DATA_Paris_D1: Weather[] = [
   new Weather("2023-01-22 22:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
   new Weather("2023-01-22 22:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
   new Weather("2023-01-22 21:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
   new Weather("2023-01-22 20:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
   new Weather("2023-01-22 19:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
   new Weather("2023-01-22 18:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
   new Weather("2023-01-22 17:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
   new Weather("2023-01-22 16:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
 
   new Weather("2023-01-22 15:55:59", 10000, "Nuageux",
     "couvert", 0.52, -4.34,
     82, 5.14, 1032,
-    new City("Paris", 48.866667, 2.333333)
+    new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
     ),
 
   new Weather("2023-01-22 14:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
 ),
 
   new Weather("2023-01-22 13:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
   new Weather("2023-01-22 12:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
 
   new Weather("2023-01-22 11:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
 
   new Weather("2023-01-22 10:55:59", 10000, "Nuageux",
     "couvert", 0.52, -4.34,
     82, 5.14, 1032,
-    new City("Paris", 48.866667, 2.333333)
+    new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
     ),
 
   new Weather("2023-01-22 9:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
 ),
 
   new Weather("2023-01-22 8:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
 
   new Weather("2023-01-22 7:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
 
   new Weather("2023-01-22 6:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
 
   new Weather("2023-01-22 5:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
 
   new Weather("2023-01-22 4:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
 
   new Weather("2023-01-22 3:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
 
   new Weather("2023-01-22 2:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
 
   new Weather("2023-01-22 1:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
 
   new Weather("2023-01-22 0:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Paris", 48.866667, 2.333333)
+  new City("Paris", 48.866667, 2.333333), MoonPhase.Pleine
   ),
 ];
 
@@ -490,137 +502,137 @@ export const WEATHER_DATA_Clermont_D1: Weather[] = [
   new Weather("2023-01-22 23:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Clermont-Ferrand", 45.777222, 3.087025)
+  new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
   new Weather("2023-01-22 22:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Clermont-Ferrand", 45.777222, 3.087025)
+  new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
   new Weather("2023-01-22 21:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Clermont-Ferrand", 45.777222, 3.087025)
+  new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
   new Weather("2023-01-22 20:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Clermont-Ferrand", 45.777222, 3.087025)
+  new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
   new Weather("2023-01-22 19:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Clermont-Ferrand", 45.777222, 3.087025)
+  new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
   new Weather("2023-01-22 18:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Clermont-Ferrand", 45.777222, 3.087025)
+  new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
   new Weather("2023-01-22 17:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Clermont-Ferrand", 45.777222, 3.087025)
+  new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
   new Weather("2023-01-22 16:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Clermont-Ferrand", 45.777222, 3.087025)
+  new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
 
   new Weather("2023-01-22 15:55:59", 10000, "Nuageux",
     "couvert", 0.52, -4.34,
     82, 5.14, 1032,
-      new City("Clermont-Ferrand", 45.777222, 3.087025)
+      new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
 
   new Weather("2023-01-22 14:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-    new City("Clermont-Ferrand", 45.777222, 3.087025)
+    new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
 ),
 
   new Weather("2023-01-22 13:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-    new City("Clermont-Ferrand", 45.777222, 3.087025)
+    new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
   new Weather("2023-01-22 12:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-    new City("Clermont-Ferrand", 45.777222, 3.087025)
+    new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
 
   new Weather("2023-01-22 11:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-    new City("Clermont-Ferrand", 45.777222, 3.087025)
+    new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
 
   new Weather("2023-01-22 10:55:59", 10000, "Nuageux",
     "couvert", 0.52, -4.34,
     82, 5.14, 1032,
-    new City("Clermont-Ferrand", 45.777222, 3.087025)
+    new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
 
   new Weather("2023-01-22 9:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Clermont-Ferrand", 45.777222, 3.087025)
+  new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
 ),
 
   new Weather("2023-01-22 8:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Clermont-Ferrand", 45.777222, 3.087025)
+  new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
 
   new Weather("2023-01-22 7:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Clermont-Ferrand", 45.777222, 3.087025)
+  new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
 
   new Weather("2023-01-22 6:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Clermont-Ferrand", 45.777222, 3.087025)
+  new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
 
   new Weather("2023-01-22 5:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Clermont-Ferrand", 45.777222, 3.087025)
+  new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
 
   new Weather("2023-01-22 4:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Clermont-Ferrand", 45.777222, 3.087025)
+  new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
 
   new Weather("2023-01-22 3:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Clermont-Ferrand", 45.777222, 3.087025)
+  new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
 
   new Weather("2023-01-22 2:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Clermont-Ferrand", 45.777222, 3.087025)
+  new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
 
   new Weather("2023-01-22 1:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Clermont-Ferrand", 45.777222, 3.087025)
+  new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
 
   new Weather("2023-01-22 0:55:59", 10000, "Nuageux",
   "couvert", 0.52, -4.34,
   82, 5.14, 1032,
-  new City("Clermont-Ferrand", 45.777222, 3.087025)
+  new City("Clermont-Ferrand", 45.777222, 3.087025), MoonPhase.Nouvelle
   ),
 ];
 
@@ -628,4 +640,9 @@ export const WEATHER_DATA_Clermont_D1: Weather[] = [
 export const getCurrentWeather = (cityName: string) => {
   if (cityName === undefined) return {};
   return WEATHER_DATA.filter(elt => elt.city.name === cityName)[0];
+}
+
+export const getWeather = (cityName: string, date: string) => {
+  if (cityName === undefined) return {};
+  return WEATHER_DATA.filter(elt => elt.city.name === cityName && elt.at == date)[0];
 }

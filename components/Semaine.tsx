@@ -3,11 +3,6 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Float } from "react-native/Libraries/Types/CodegenTypes";
 import DayWeather from "./DayWeather";
 
-type Semaine = {
-  name : string ;
-  tempMoyenne : Float;
-}
-
 export default function Semaine() {
     const board:Array<number> = new Array(7);
   return (
@@ -23,7 +18,8 @@ const semaineStyle = StyleSheet.create({
     container : {
         flex : 1,
         alignItems : "center",
-        borderWidth: 2,
+        borderWidth: 2.5,
+        borderRadius: 5,
     }
   });
 
