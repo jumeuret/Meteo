@@ -1,4 +1,5 @@
-import {StyleSheet, Text, View} from "react-native";
+import {Image, StyleSheet, Text, View} from "react-native";
+import {useState} from "react";
 
 type DetailsProps = {
     logo: string;
@@ -8,10 +9,11 @@ type DetailsProps = {
 }
 
 export default function Details(props: DetailsProps) {
+    var image = useState(require(props.logo))
     return (
         <View>
             <View style={styles.block}>
-                <Image style={styles.image}>{props.logo}</Image>
+                <Image style={styles.image} source={image}/>
                 <Text>{props.nom}</Text>
                 <Text>{props.valeur} {props.unite}</Text>
             </View>
@@ -32,4 +34,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         padding: 5,
     },
+    image: {
+        width: 25,
+        height: 25,
+    }
 });
