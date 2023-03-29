@@ -1,5 +1,6 @@
-import { Weather, WEATHER_DATA } from "./../data/stub";
+import { WEATHER_DATA } from "./../data/stub";
 import Infos from "./Infos";
+import Weather from "../class/Weather";
 import {View, FlatList, StyleSheet} from "react-native";
 
 type InfosJourProps = {
@@ -13,7 +14,7 @@ export default function InfosJour(props: InfosJourProps) {
         {/*<FlatList data={WEATHER_DATA} renderItem={({item}) =>
         <InfosJour item={item}/>
       }}*/}
-      <FlatList data={props.item} renderItem={Infos}/>
+      {/* <FlatList data={props.item} renderItem={Infos}/> */}
       </View>
     </View>
   )

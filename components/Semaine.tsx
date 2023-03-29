@@ -1,21 +1,22 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, ScrollView } from 'react-native';
 import { Float } from "react-native/Libraries/Types/CodegenTypes";
 import DayWeather from "./DayWeather";
 
-type Semaine = {
-  name : string ;
-  tempMoyenne : Float;
-}
-
+/**
+ * Fonction qui réalise la vue de la météo de la semaine correspondant à une ville précise
+ * @returns une scrollView qui, pour chaque jour de la semaine et une ville donnée, affiche la vue du composant DayWeather
+ */
 export default function Semaine() {
-    const board:Array<number> = new Array(7);
+  const dayWeek : string[] = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+  const dateWeek : string[] = ["2023-01-22", "2023-01-23", "2023-01-24", "2023-01-25", "2023-01-26", "2023-01-27", "2023-01-28"]
+
   return (
-    <View style={semaineStyle.container}>
-      {board.fill(0).map((_,i)=>
-          <DayWeather key={i} />
+    <ScrollView horizontal={false} contentContainerStyle={semaineStyle.container}>
+      {dayWeek.map((jour, index)=>
+        <DayWeather key={index} jour={jour} ville="lyon" />
       )}
-    </View>
+    </ScrollView>
   );
 };
   
