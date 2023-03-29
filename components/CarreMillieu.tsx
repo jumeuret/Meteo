@@ -1,6 +1,10 @@
 import React from "react";
 import {City, Weather} from "../data/stub";
 
+/**
+ * Fonction qui recupère la température associé au 3 moments clés de la journée, à savoir 6h le matin, 12 h le midi et 19h le soir.
+ * @returns {Map<string, number>} - Une map contenant en clé le moment de la journée et en valeur la température qui lui est associée
+ */
 
 export function recuperationTemp(meteos: Weather[], ville:City) : {[key: string]: number;}{
   var temperatures: {[key: string]: number;} = {}

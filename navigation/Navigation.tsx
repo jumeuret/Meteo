@@ -4,6 +4,10 @@ import {createStackNavigator} from "@react-navigation/stack";
 import {NavigationContainer} from "@react-navigation/native";
 import DetailsScreen from "../screens/DetailsScreen";
 
+/**
+ * Une fonction permettant de définir la navigation, elle contient les routes de l'application
+ * @returns Un navigationContainer
+ */
 export default function StackNavigation() {
     const Stack = createStackNavigator();
         return (
