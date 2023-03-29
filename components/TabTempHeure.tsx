@@ -8,21 +8,21 @@ import Weather from "../class/Weather";
 import moment, { Moment } from 'moment';
 
 /**
- * Fonction qui réalise la vu de la météo de la journée à partir d'un ville précise
- * @returns 
+ * Fonction qui réalise la vue de la météo de la journée à partir d'un ville précise
+ * @returns une srollview qui, pour une ville, retourne pour chaque heure la vue du composant TempHeure
  */
 export default function TabTempHeure() {
   const tempHeures:Array<number> = new Array(7);
   const heureDay : string[] = []
   for( var i=0; i<24; i++){
-    heureDay.push(i+":59:59")
+    heureDay.push(i+":55:59")
   }
 
   return (
     <View style={TabTempHeureStyle.container}> 
       <ScrollView horizontal={true}> 
         {heureDay.map((heure, index)=>
-            <TempHeure key={i} ville="lyon" jour="lundi" heure={heure}/>
+            <TempHeure key={index} ville="paris" jour="2023-01-28" heure={heure}/>
         )}
     </ScrollView>
     </View>

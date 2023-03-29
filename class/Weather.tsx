@@ -1,5 +1,8 @@
 import City from "./City";
 
+/**
+ * Classe qui permet, pour une ville, de construire sa météo
+ */
 export default class Weather {
   private _at: string;
   private _visibility: number;

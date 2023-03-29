@@ -8,7 +8,11 @@ type RecupDataProps = {
   jour : string;
   ville : string;
 }
-
+/**
+ * Fonction qui, pour un jour et une ville donnée, permet de caclulée des informations sur la température de cette journée (température moyenne, minimum et maximum)
+ * @param props 
+ * @returns une map contenant les informations
+ */
 export function RecupDataDayWeather(props : RecupDataProps) : {[key : string] : number }{
 
   const date: Moment = moment();
@@ -26,9 +30,8 @@ export function RecupDataDayWeather(props : RecupDataProps) : {[key : string] : 
   }
 
   for (let i=0; i< listWeather.length ; i++){
-    
     jourRecup = listWeather[i];
-    if (date.format(jourRecup[i].at.split(" ")[0])==props.jour ){
+    if(date.format(jourRecup[i].at.split(" ")[0])==props.jour ){
       var sumTemp : number =0;
       var tempMax : number=0;
       var tempMini : number =jourRecup[0];
@@ -42,7 +45,7 @@ export function RecupDataDayWeather(props : RecupDataProps) : {[key : string] : 
         sumTemp +=  jourRecup[j].temperature;
       }
       var tempMoyenne : number =  sumTemp/24;
-      data["temperatureMoyenne"] = 8 ;
+      data["temperatureMoyenne"] = tempMoyenne ;
       data["temperatureMini"] = tempMini ; 
       data["temperatureMax"] = tempMax ; 
       return data;
@@ -54,11 +57,12 @@ export function RecupDataDayWeather(props : RecupDataProps) : {[key : string] : 
 /**
  * Fonction qui réalise la vue du détaille d'un jour à partir d'information reçue en paramètre 
  * @param {string} jour - Le nom du jour voulu
- * @param {string} ville - Le nom de la ville voul
- * @returns 
+ * @param {string} ville - Le nom de la ville voulu
+ * @returns La vue associée à ce détail de la journée
  */
 export default function DayWeather({ jour, ville }: { jour: string, ville: string }) {
 const tempData : {[key : string] : number }= RecupDataDayWeather({jour, ville});
+console.log("DayWeather", tempData)
 
   return (
     <View style={dayWeatherStyle.container}> 

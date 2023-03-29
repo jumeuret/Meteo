@@ -1,4 +1,6 @@
-
+/**
+ * Classe qui permet de construire une ville 
+ */
 export default class City {
   private _name: string;
   private _latitude: number;

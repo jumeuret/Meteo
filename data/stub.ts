@@ -6,6 +6,9 @@ import * as stubClermont from "./stubClermont";
 import Weather from "../class/Weather";
 import City from "../class/City";
 
+/**
+ * Constante qui retourne une matrice contenant les informations de chaque jours de la semains pour la ville de Clermont
+ */
 export const tabClermont : Weather[][] = [
   stubClermont.WEATHER_DATA_Clermont_D1, 
   stubClermont.WEATHER_DATA_Clermont_D2, 
@@ -16,6 +19,9 @@ export const tabClermont : Weather[][] = [
   stubClermont.WEATHER_DATA_Clermont_D7
 ];
 
+/**
+ * Constante qui retourne une matrice contenant les informations de chaque jours de la semains pour la ville de Lyon
+ */
 export const tabLyon : Weather[][] = [
   stubLyon.WEATHER_DATA_Lyon_D1, 
   stubLyon.WEATHER_DATA_Lyon_D2, 
@@ -26,6 +32,9 @@ export const tabLyon : Weather[][] = [
   stubLyon.WEATHER_DATA_Lyon_D7
 ];
 
+/**
+ * Constante qui retourne une matrice contenant les informations de chaque jours de la semains pour la ville de Bruxelles
+ */
 export const tabBruxelles : Weather[][] = [
   stubBruxelles.WEATHER_DATA_Bruxelles_D1, 
   stubBruxelles.WEATHER_DATA_Bruxelles_D2, 
@@ -36,6 +45,9 @@ export const tabBruxelles : Weather[][] = [
   stubBruxelles.WEATHER_DATA_Bruxelles_D7
 ];
 
+/**
+ * Constante qui retourne une matrice contenant les informations de chaque jours de la semains pour la ville de Paris
+ */
 export const tabParis : Weather[][] = [
   stubParis.WEATHER_DATA_Paris_D1, 
   stubParis.WEATHER_DATA_Paris_D2, 
@@ -46,6 +58,9 @@ export const tabParis : Weather[][] = [
   stubParis.WEATHER_DATA_Paris_D7
 ];
 
+/**
+ * Constante qui retourne une matrice contenant les informations de chaque jours de la semains pour la ville de Marseille
+ */
 export const tabMarseille : Weather[][] = [
   stubMarseille.WEATHER_DATA_Marseille_D1, 
   stubMarseille.WEATHER_DATA_Marseille_D2, 
