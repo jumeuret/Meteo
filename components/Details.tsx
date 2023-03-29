@@ -1,21 +1,21 @@
-import {Image, StyleSheet, Text, View} from "react-native";
+import {Image, ImageSourcePropType, StyleSheet, Text, View} from "react-native";
 import {useState} from "react";
 
 type DetailsProps = {
-    logo: string;
+    logo: ImageSourcePropType
     nom: string
-    valeur: number;
+    valeur: number | string;
     unite: string;
 }
 
 export default function Details(props: DetailsProps) {
-    var image = useState(require(props.logo))
     return (
         <View>
             <View style={styles.block}>
-                <Image style={styles.image} source={image}/>
+                <Image style={styles.image} source={props.logo}/>
                 <Text>{props.nom}</Text>
-                <Text>{props.valeur} {props.unite}</Text>
+                <Text>{props.valeur}</Text>
+                <Text>{props.unite}</Text>
             </View>
         </View>
     )
@@ -25,8 +25,12 @@ const styles = StyleSheet.create({
     block: {
         backgroundColor: '#DFD3C3',
         alignItems: 'center',
+        flexDirection: "row",
+        justifyContent: "space-between",
         display: "flex",
-        margin: 10,
+        padding: 10,
+        paddingHorizontal: 20,
+        borderColor: "black",
     },
     valeur: {
         backgroundColor: 'grey',
@@ -35,7 +39,7 @@ const styles = StyleSheet.create({
         padding: 5,
     },
     image: {
-        width: 25,
-        height: 25,
+        width: 50,
+        height: 50,
     }
 });

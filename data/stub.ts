@@ -643,6 +643,17 @@ export const getCurrentWeather = (cityName: string) => {
 }
 
 export const getWeather = (cityName: string, date: string) => {
-  if (cityName === undefined) return {};
-  return WEATHER_DATA.filter(elt => elt.city.name === cityName && elt.at == date)[0];
+  /*console.log("LyonMeteo : " + WEATHER_DATA_Lyon_D1.filter(elt => elt.city.name === cityName && elt.at == date)[0])
+  console.log("LyonVille : " + WEATHER_DATA_Lyon_D1[0].city.name)
+  console.log("LyonDate : " + WEATHER_DATA_Lyon_D1[0].at)
+  if (WEATHER_DATA_Lyon_D1[0].city.name === cityName){
+    console.log("OK ville ===")
+  }
+  if (WEATHER_DATA_Lyon_D1[0].city.name == cityName){
+    console.log("OK ville ==")
+  }
+  if (WEATHER_DATA_Lyon_D1[0].at == date){
+    console.log("OK date")
+  }*/
+  return WEATHER_DATA_Lyon_D1.filter(elt => elt.city.name === cityName && elt.at == date)[0];
 }

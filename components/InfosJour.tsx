@@ -9,18 +9,16 @@ type InfosJourProps = {
 
 export default function InfosJour(props: InfosJourProps) {
   return (
-    <View>
-      <View style={styles.block}>
-          <View style={styles.haut_droite}>
-            <Infos time={props.periodes[0]} value={props.meteo["maintenant"]}/>
-          </View>
-          <View style={styles.conteneur}>
-              <Image style={styles.image} source={require('../assets/soleil.png')}/></View>
-          <View style={styles.ligne}>
-              <Infos time={props.periodes[1]} value={props.meteo["matin"]} />
-              <Infos time={props.periodes[2]} value={props.meteo["apres-midi"]} />
-              <Infos time={props.periodes[3]} value={props.meteo["soir"]} />
-          </View>
+    <View style={styles.block}>
+      <View style={styles.haut_droite}>
+        <Infos time={props.periodes[0]} value={props.meteo["maintenant"]}/>
+      </View>
+      <View style={styles.conteneur}>
+          <Image style={styles.image} source={require("../assets/images/soleil.png")}/></View>
+      <View style={styles.ligne}>
+          <Infos time={props.periodes[1]} value={props.meteo["matin"]} />
+          <Infos time={props.periodes[2]} value={props.meteo["apres-midi"]} />
+          <Infos time={props.periodes[3]} value={props.meteo["soir"]} />
       </View>
     </View>
   )

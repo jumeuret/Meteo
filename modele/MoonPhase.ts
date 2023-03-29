@@ -1,10 +1,10 @@
 export enum MoonPhase {
-    Nouvelle=1,
-    PremierCroissant=2,
-    PremierQuartier=3,
-    GibbeuseCroissante=4,
-    Pleine=5,
-    GibbeuseDecroissante =6,
-    DernierQuartier=7,
-    DernierCroissant=8,
+    Nouvelle = "Nouvelle \n lune",
+    PremierCroissant = "Premier \n croissant",
+    PremierQuartier = "Premier \n quartier",
+    GibbeuseCroissante = "Lune gibbeuse \n croissante",
+    Pleine = "Pleine \n lune",
+    GibbeuseDecroissante = "Lune gibbeuse \n décroissante",
+    DernierQuartier = "Dernier \n quartier",
+    DernierCroissant = "Dernier \n croissant",
 }
