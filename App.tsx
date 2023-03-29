@@ -1,7 +1,4 @@
-import { StyleSheet, Text, View, FlatList, Button, SafeAreaView } from 'react-native';
-import { Weather, WEATHER_DATA } from "./data/stub";
-import InfosJour from "./components/InfosJour";
-import HomeScreen from "./screens/HomeScreen";
+import {SafeAreaView, StyleSheet} from 'react-native';
 import StackNavigation from "./navigation/Navigation"
 
 export default function App() {

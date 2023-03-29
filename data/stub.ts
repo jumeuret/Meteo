@@ -3,11 +3,12 @@ import * as stubLyon from "./stubLyon";
 import * as stubParis from "./stubParis";
 import * as stubMarseille from "./stubMarseille";
 import * as stubClermont from "./stubClermont";
-import Weather from "../class/Weather";
-import City from "../class/City";
+import Weather from "../modele/Weather";
+import City from "../modele/City";
+import {MoonPhase} from "../modele/MoonPhase";
 
 /**
- * Constante qui retourne une matrice contenant les informations de chaque jours de la semains pour la ville de Clermont
+ * Constante qui retourne un tableau de tableaux contenant les informations de chaque jours de la semains pour la ville de Clermont
  */
 export const tabClermont : Weather[][] = [
   stubClermont.WEATHER_DATA_Clermont_D1,
@@ -20,7 +21,7 @@ export const tabClermont : Weather[][] = [
 ];
 
 /**
- * Constante qui retourne une matrice contenant les informations de chaque jours de la semains pour la ville de Lyon
+ * Constante qui retourne un tableau de tableaux contenant les informations de chaque jours de la semains pour la ville de Lyon
  */
 export const tabLyon : Weather[][] = [
   stubLyon.WEATHER_DATA_Lyon_D1,
@@ -33,7 +34,7 @@ export const tabLyon : Weather[][] = [
 ];
 
 /**
- * Constante qui retourne une matrice contenant les informations de chaque jours de la semains pour la ville de Bruxelles
+ * Constante qui retourne un tableau de tableaux contenant les informations de chaque jours de la semains pour la ville de Bruxelles
  */
 export const tabBruxelles : Weather[][] = [
   stubBruxelles.WEATHER_DATA_Bruxelles_D1,
@@ -46,7 +47,7 @@ export const tabBruxelles : Weather[][] = [
 ];
 
 /**
- * Constante qui retourne une matrice contenant les informations de chaque jours de la semains pour la ville de Paris
+ * Constante qui retourne un tableau de tableaux contenant les informations de chaque jours de la semains pour la ville de Paris
  */
 export const tabParis : Weather[][] = [
   stubParis.WEATHER_DATA_Paris_D1,
@@ -59,7 +60,7 @@ export const tabParis : Weather[][] = [
 ];
 
 /**
- * Constante qui retourne une matrice contenant les informations de chaque jours de la semains pour la ville de Marseille
+ * Constante qui retourne un tableau de tableaux contenant les informations de chaque jours de la semains pour la ville de Marseille
  */
 export const tabMarseille : Weather[][] = [
   stubMarseille.WEATHER_DATA_Marseille_D1,
@@ -147,17 +148,20 @@ export const getCurrentWeather = (cityName: string) => {
 }
 
 export const getWeather = (cityName: string, date: string) => {
-  /*console.log("LyonMeteo : " + WEATHER_DATA_Lyon_D1.filter(elt => elt.city.name === cityName && elt.at == date)[0])
-  console.log("LyonVille : " + WEATHER_DATA_Lyon_D1[0].city.name)
-  console.log("LyonDate : " + WEATHER_DATA_Lyon_D1[0].at)
-  if (WEATHER_DATA_Lyon_D1[0].city.name === cityName){
+  /*console.log("LyonMeteo : " + tabLyon[0].filter(elt => elt.city.name === cityName && elt.at == date)[0])
+  console.log("LyonVille : " + tabLyon[0][0].city.name)
+  console.log("LyonDate : " + tabLyon[0][0].at)
+  if (tabLyon[0][0].city.name === cityName){
     console.log("OK ville ===")
   }
-  if (WEATHER_DATA_Lyon_D1[0].city.name == cityName){
+  if (tabLyon[0][0].city.name == cityName){
     console.log("OK ville ==")
   }
-  if (WEATHER_DATA_Lyon_D1[0].at == date){
+  if (tabLyon[0][0].at == date){
     console.log("OK date")
-  }*/
-  return WEATHER_DATA_Lyon_D1.filter(elt => elt.city.name === cityName && elt.at == date)[0];
+  }
+  console.log("return : " + tabLyon[0].filter(tab => tab.city.name === cityName && tab.at == date))
+  */
+  console.log("return : " + tabLyon[0].filter(tab => tab.city.name === cityName && tab.at == date)[0]);
+  return tabLyon[0].filter(tab => tab.city.name === cityName && tab.at == date)[0];
 }

@@ -1,5 +1,6 @@
 import React from "react";
-import {City, Weather} from "../data/stub";
+import Weather from "../modele/Weather";
+import City from "../modele/City";
 
 /**
  * Fonction qui recupère la température associé au 3 moments clés de la journée, à savoir 6h le matin, 12 h le midi et 19h le soir.

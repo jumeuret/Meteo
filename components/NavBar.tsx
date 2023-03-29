@@ -1,4 +1,4 @@
-import {View, FlatList, StyleSheet} from "react-native";
+import {View} from "react-native";
 
 
 export default function NavBar() {

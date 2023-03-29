@@ -1,11 +1,6 @@
-import React, { Component } from "react";
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
-import { Float } from "react-native/Libraries/Types/CodegenTypes";
-import {WEATHER_DATA} from "../data/stub";
-import { WEATHER_DATA_Lyon_D1 } from "../data/stubLyon";
+import React from "react";
+import {ScrollView, StyleSheet, View} from 'react-native';
 import TempHeure from "./TempHeure";
-import Weather from "../class/Weather";
-import moment, { Moment } from 'moment';
 
 /**
  * Fonction qui réalise la vue de la météo de la journée à partir d'un ville précise

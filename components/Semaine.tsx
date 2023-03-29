@@ -1,6 +1,5 @@
-import React, { Component } from "react";
-import { StyleSheet, ScrollView } from 'react-native';
-import { Float } from "react-native/Libraries/Types/CodegenTypes";
+import React from "react";
+import {ScrollView, StyleSheet} from 'react-native';
 import DayWeather from "./DayWeather";
 
 /**

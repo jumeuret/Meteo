@@ -1,11 +1,6 @@
 import {StyleSheet, View} from "react-native";
-import InfosJour from "../components/InfosJour";
-import {recuperationTemp} from "../components/CarreMillieu";
-import {City, getCurrentWeather, getWeather, PERIODES, Weather, WEATHER_DATA_Lyon_D1} from "../data/stub";
-import TabTempHeure from "../components/TabTempHeure";
-import Semaine from "../components/Semaine";
+import {getWeather} from "../data/stub";
 import DetailsJour from "../components/DetailsJour";
-import {NativeStackScreenProps} from "@react-navigation/native-stack";
 
 export default function DetailsScreen({route} : any) {
     //console.log("route : " + route)

@@ -1,5 +1,4 @@
 import {Image, ImageSourcePropType, StyleSheet, Text, View} from "react-native";
-import {useState} from "react";
 
 type DetailsProps = {
     logo: ImageSourcePropType

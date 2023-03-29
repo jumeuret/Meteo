@@ -1,8 +1,8 @@
 import React from "react";
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
-import moment, { Moment } from 'moment';
+import {StyleSheet, Text, View} from 'react-native';
+import moment, {Moment} from 'moment';
 import * as stub from "../data/stub"
-import Weather from "../class/Weather";
+import Weather from "../modele/Weather";
 
 type JourPropos = {
   heure : string;
@@ -33,8 +33,8 @@ export function RecupeMomentJour(props : JourPropos) : {[key : string] : number 
     if(date.format(jourRecup[i].at.split(" ")[0])==props.jour){
       // Ne rentre pas dans le if
       for(var j=0; j<jourRecup.length; j++){
-        console.log("helllo", j, jourRecup.length);
-        console.log(props.heure);
+        //console.log("helllo", j, jourRecup.length);
+        //console.log(props.heure);
         //fait de la merde
           if(jourRecup[j].at.split(" ")[1]===props.heure){
             momentJour["heure"]=jourRecup[j].temperature;

@@ -1,4 +1,5 @@
 import City from "./City";
+import {MoonPhase} from "./MoonPhase";
 
 /**
  * Classe qui permet, pour une ville, de construire sa météo
@@ -14,8 +15,9 @@ export default class Weather {
   private _windSpeed: number;
   private _pressure: number;
   private _city: City;
+  private _moonPhase: MoonPhase;
 
-  constructor(at: string, visibility: number, weatherType: string, weatherDescription: string, temperature: number, temperatureFeelsLike: number, humidity: number, windSpeed: number, pressure: number, city: City) {
+  constructor(at: string, visibility: number, weatherType: string, weatherDescription: string, temperature: number, temperatureFeelsLike: number, humidity: number, windSpeed: number, pressure: number, city: City, moonPhase: MoonPhase) {
     this._at = at;
     this._visibility = visibility;
     this._weatherType = weatherType;
@@ -26,6 +28,7 @@ export default class Weather {
     this._windSpeed = windSpeed;
     this._pressure = pressure;
     this._city = city;
+    this._moonPhase = moonPhase;
   }
 
   get at(): string {
@@ -106,5 +109,13 @@ export default class Weather {
 
   set city(value: City) {
     this._city = value;
+  }
+
+  get moonPhase(): MoonPhase {
+    return this._moonPhase;
+  }
+
+  set moonPhase(value: MoonPhase) {
+    this._moonPhase = value;
   }
 }

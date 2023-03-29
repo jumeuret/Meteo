@@ -1,6 +1,6 @@
-import {Weather, WEATHER_DATA, WEATHER_DATA_Lyon_D1} from "./../data/stub";
+import {Weather} from "./../data/stub";
 import Infos from "./Infos";
-import {View, FlatList, StyleSheet, Image} from "react-native";
+import {Image, StyleSheet, View} from "react-native";
 
 type InfosJourProps = {
   meteo: {[key: string]: number;};

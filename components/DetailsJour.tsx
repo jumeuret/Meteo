@@ -1,9 +1,6 @@
-import {Image, StyleSheet, View} from "react-native";
-import Infos from "./Infos";
-import {Weather} from "../data/stub";
+import {StyleSheet, View} from "react-native";
+import Weather from "../modele/Weather";
 import Details from "./Details";
-import {useState} from "react";
-import {MoonPhase} from "../modele/MoonPhase";
 
 type DetailsJourProps = {
     weather: Weather;
@@ -24,7 +21,7 @@ export default function DetailsJour(props: DetailsJourProps) {
                     <Details valeur={props.weather.humidity} nom={"Humidité"} unite={"%"} logo={require('../assets/icones/humidite.png')}/>
                 </View>
                 <View>
-                    <Details valeur={props.weather.moon} nom={"Phase \n lunaire"} unite={""} logo={require('../assets/icones/lunes.png')}/>
+                    <Details valeur={props.weather.moonPhase} nom={"Phase \n lunaire"} unite={""} logo={require('../assets/icones/lunes.png')}/>
                 </View>
             </View>
         </View>
