@@ -1,6 +1,7 @@
 import {StyleSheet, View} from "react-native";
 import Weather from "../modele/Weather";
 import Details from "./Details";
+import {MoonPhase} from "../modele/MoonPhase";
 
 type DetailsJourProps = {
     weather: Weather;
@@ -8,6 +9,33 @@ type DetailsJourProps = {
 
 export default function DetailsJour(props: DetailsJourProps) {
 
+    var source: String;
+    switch (props.weather.moonPhase){
+        case MoonPhase.Nouvelle:
+            source = "nouvelleLune.png"
+            break
+        case MoonPhase.PremierQuartier:
+            source = "premierQuartier.png"
+            break
+        case MoonPhase.DernierCroissant:
+            source = "dernierCroissant.png"
+            break
+        case MoonPhase.DernierQuartier:
+            source = "dernierQuartier.png"
+            break
+        case MoonPhase.GibbeuseCroissante:
+            source = "gibbeuseCroissante.png"
+            break
+        case MoonPhase.GibbeuseDecroissante:
+            source = "gibbeuseDecroissante.png"
+            break
+        case MoonPhase.PremierCroissant:
+            source = "premierCroissant.png"
+            break
+        default:
+            source = "pleineLune.png"
+            break
+    }
     return (
         <View>
             <View style={styles.block}>
@@ -21,7 +49,7 @@ export default function DetailsJour(props: DetailsJourProps) {
                     <Details valeur={props.weather.humidity} nom={"Humidité"} unite={"%"} logo={require('../assets/icones/humidite.png')}/>
                 </View>
                 <View>
-                    <Details valeur={props.weather.moonPhase} nom={"Phase \n lunaire"} unite={""} logo={require('../assets/icones/lunes.png')}/>
+                    <Details valeur={props.weather.moonPhase} nom={"Phase \n lunaire"} unite={""} logo={require('../assets/icones/lune/' + source)}/>
                 </View>
             </View>
         </View>
