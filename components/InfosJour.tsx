@@ -1,4 +1,3 @@
-import {Weather} from "./../data/stub";
 import Infos from "./Infos";
 import {Image, StyleSheet, View} from "react-native";
 
@@ -34,7 +33,7 @@ const styles = StyleSheet.create({
     },
     ligne: {
         flex: 1,
-        flexDirection: "row-reverse",
+        flexDirection: "row",
         justifyContent: "space-evenly",
     },
     haut_droite: {

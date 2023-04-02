@@ -1,7 +1,7 @@
 import React from "react";
 import moment, {Moment} from 'moment';
 import {StyleSheet, Text, View} from 'react-native';
-import * as stub from "../data/stub"
+import * as stub from "../data/Stub/stub"
 import Weather from "../modele/Weather";
 
 type RecupDataProps = {

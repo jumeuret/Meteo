@@ -9,7 +9,7 @@ type DetailsJourProps = {
 
 export default function DetailsJour(props: DetailsJourProps) {
 
-    var source: String;
+    var source: string;
     switch (props.weather.moonPhase){
         case MoonPhase.Nouvelle:
             source = "nouvelleLune.png"

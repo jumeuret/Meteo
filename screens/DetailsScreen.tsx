@@ -1,5 +1,4 @@
 import {StyleSheet, View} from "react-native";
-import {getWeather} from "../data/stub";
 import DetailsJour from "../components/DetailsJour";
 
 export default function DetailsScreen({route} : any) {
@@ -11,7 +10,7 @@ export default function DetailsScreen({route} : any) {
 
     return (
         <View style={styles.container}>
-            <DetailsJour weather={getWeather(route.params.weather.city.name, route.params.weather.at)}/>
+            <DetailsJour weather={route.params.weather}/>
         </View>
     )
 };

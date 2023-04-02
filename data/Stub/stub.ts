@@ -3,9 +3,9 @@ import * as stubLyon from "./stubLyon";
 import * as stubParis from "./stubParis";
 import * as stubMarseille from "./stubMarseille";
 import * as stubClermont from "./stubClermont";
-import Weather from "../modele/Weather";
-import City from "../modele/City";
-import {MoonPhase} from "../modele/MoonPhase";
+import Weather from "../../modele/Weather";
+import City from "../../modele/City";
+import {MoonPhase} from "../../modele/MoonPhase";
 
 /**
  * Constante qui retourne un tableau de tableaux contenant les informations de chaque jours de la semains pour la ville de Clermont
@@ -142,13 +142,13 @@ export const PERIODES = [
     "Soir"
 ]
 
-export const getCurrentWeather = (cityName: string) => {
+/*export const getCurrentWeather = (cityName: string) => {
   if (cityName === undefined) return {};
   return WEATHER_DATA.filter(elt => elt.city.name === cityName)[0];
-}
+}*/
 
-export const getWeather = (cityName: string, date: string) => {
-  /*console.log("LyonMeteo : " + tabLyon[0].filter(elt => elt.city.name === cityName && elt.at == date)[0])
+/*export const getWeather = (cityName: string, date: string) => {
+  console.log("LyonMeteo : " + tabLyon[0].filter(elt => elt.city.name === cityName && elt.at == date)[0])
   console.log("LyonVille : " + tabLyon[0][0].city.name)
   console.log("LyonDate : " + tabLyon[0][0].at)
   if (tabLyon[0][0].city.name === cityName){
@@ -161,7 +161,7 @@ export const getWeather = (cityName: string, date: string) => {
     console.log("OK date")
   }
   console.log("return : " + tabLyon[0].filter(tab => tab.city.name === cityName && tab.at == date))
-  */
   console.log("return : " + tabLyon[0].filter(tab => tab.city.name === cityName && tab.at == date)[0]);
+
   return tabLyon[0].filter(tab => tab.city.name === cityName && tab.at == date)[0];
-}
+}*/

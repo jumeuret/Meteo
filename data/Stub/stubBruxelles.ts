@@ -1,6 +1,6 @@
-import City from "../modele/City";
-import Weather from "../modele/Weather";
-import {MoonPhase} from "../modele/MoonPhase";
+import City from "../../modele/City";
+import Weather from "../../modele/Weather";
+import {MoonPhase} from "../../modele/MoonPhase";
 
 /**
  * Constante qui retourne un tableau contenant les informations sur chaque heure du jour1 de la ville de Bruxelles
