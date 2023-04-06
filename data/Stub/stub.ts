@@ -1,4 +1,4 @@
-import * as  stubBruxelles from "./stubBruxelles";
+import * as stubBruxelles from "./stubBruxelles";
 import * as stubLyon from "./stubLyon";
 import * as stubParis from "./stubParis";
 import * as stubMarseille from "./stubMarseille";
@@ -6,6 +6,13 @@ import * as stubClermont from "./stubClermont";
 import Weather from "../../modele/Weather";
 import City from "../../modele/City";
 import {MoonPhase} from "../../modele/MoonPhase";
+
+export const PERIODES = [
+  "Actuelle",
+  "Matin",
+  "Midi",
+  "Soir"
+]
 
 /**
  * Constante qui retourne un tableau de tableaux contenant les informations de chaque jours de la semains pour la ville de Clermont
@@ -80,8 +87,9 @@ export const CITIES_DATA: City[] = [
   new City("Bruxelles", 50.85034, 4.35171),
 ];
 
-export const FAVORITE_CITY_DATA =
-  new City("Clermont-Ferrand", 45.777222, 3.087025);
+export const FAVORITE_CITY_DATA: City[] = [
+  new City("Clermont-Ferrand", 45.777222, 3.087025)
+];
 
 export const DEFAULT_SELECTED_CITY_DATA: City =
   new City("Paris", 48.866667, 2.333333);
@@ -134,13 +142,6 @@ export const WEATHER_DATA: Weather[] = [
   ),
   
 ];
-
-export const PERIODES = [
-    "Actuelle",
-    "Matin",
-    "Midi",
-    "Soir"
-]
 
 /*export const getCurrentWeather = (cityName: string) => {
   if (cityName === undefined) return {};

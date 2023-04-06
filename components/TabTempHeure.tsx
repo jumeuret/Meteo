@@ -19,7 +19,7 @@ export default function TabTempHeure() {
         {heureDay.map((heure, index)=>
             <TempHeure key={index} ville="paris" jour="2023-01-28" heure={heure}/>
         )}
-    </ScrollView>
+      </ScrollView>
     </View>
   );
 };
