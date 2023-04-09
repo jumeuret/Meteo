@@ -12,3 +12,9 @@ web-build/
 node_modules/
 # macOS
 .DS_Store
+/.idea/.gitignore
+/.idea/Appli_meteo.iml
+/assets/icones/lune/lune.xcf
+/assets/icones/lune/lunes.png
+/.idea/modules.xml
+/.idea/vcs.xml

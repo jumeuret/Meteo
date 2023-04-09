@@ -1,7 +1,12 @@
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import {StyleSheet, Text, View, ScrollView, Button} from 'react-native';
 import TabTempHeure from "../components/TabTempHeure";
 import Semaine from "../components/Semaine";
 import {SearchBar} from "../components/SearchBar";
+// @ts-ignore
+import {useState} from "react";
+import {StubbedDataManager} from "../data/Stub/StubbedDataManager";
+import InfosJour from "../components/InfosJour";
+import {PERIODES} from "../data/Stub/stub"
 
 
 export default function HomeScreen({navigation} : any) {
@@ -29,7 +34,7 @@ export default function HomeScreen({navigation} : any) {
             <Semaine/>
             {/*<Button title={"Plus"} onPress={() => navigation.navigate("Details", {weather: tabLyon[0][0]})}/>*/}
             <Button title={"Plus"} onPress={() => navigation.navigate("Details")}/>
-
+        </View>
   )
 }};
 
