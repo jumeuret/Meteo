@@ -14,15 +14,14 @@ import CitiesScreen from "../screens/CitiesScreen";
 type StackNavProps = {
     data: StubbedDataManager;
 }
-export default function StackNavigation() {
+/*export default function StackNavigation() {
     const Stack = createStackNavigator();
         return (
             <NavigationContainer>
                 <Stack.Navigator initialRouteName="Home">
                     <Stack.Screen name="Home" component={HomeScreen}/>
                     <Stack.Screen name="Details" component={DetailsScreen}/>
-                    <Stack.Screen name="Cities" component={CitiesScreen}/>
                 </Stack.Navigator>
             </NavigationContainer>
         )
-}
+}*/

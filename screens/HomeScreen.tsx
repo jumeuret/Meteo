@@ -21,7 +21,7 @@ export default function HomeScreen({navigation} : any) {
             <TabTempHeure/>
             <Semaine/>
             {/*<Button title={"Plus"} onPress={() => navigation.navigate("Details", {weather: tabLyon[0][0]})}/>*/}
-            <Button title={"Plus"} onPress={() => navigation.navigate("Details", {weather: meteo})}/>
+            <Button title={"Plus"} onPress={() => navigation.navigate("Details")}/>
         </View>
     )
 };

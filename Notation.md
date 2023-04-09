@@ -18,14 +18,14 @@ Duration : 10 * 2h
 -[X] Display list of items (2 pts)
   -[X] FlatList, VirtualizedList or SectionList
 -[X] Display image (1 pts)
--[?] Child props (1 pts)
+-[X] Child props (1 pts)
 -[] TextInput (1 pts)
 
 ## Application features (6 pts)
 
 -[] Retrieve data using the Web API (2 pts)
 -[] Store favorite data into phone storage (2 pts)
--[] Write Tests (2 pts)
+-[] Write Tests (2 pts) (All actions & reducers case & at least one UI Component) ( Composant fils )
 
 ## Bonus (only taken into account if the basics are all mastered)
 

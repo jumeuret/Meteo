@@ -1,14 +1,17 @@
 import {SafeAreaView, StyleSheet} from 'react-native';
-import StackNavigation from "./navigation/StackNavigation"
 import {StubbedDataManager} from "./data/Stub/StubbedDataManager";
 import BottomNavigation from "./navigation/BottomNavigation";
+import store from "./redux/Store"
+import {Provider} from "react-redux";
 
 export default function App() {
   var data = new StubbedDataManager()
-  return (  
-    <SafeAreaView style={styles.container}>
-      <BottomNavigation/>
-    </SafeAreaView>
+  return (
+    <Provider store={store}>
+      <SafeAreaView style={styles.container}>
+        <BottomNavigation/>
+      </SafeAreaView>
+    </Provider>
   );
 }
 
