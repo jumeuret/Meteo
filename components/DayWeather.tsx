@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import moment, { Moment } from 'moment';
-import { StyleSheet, Text, View } from 'react-native';
-import * as stub from "../data/stub"
-import Weather from "../class/Weather";
+import React from "react";
+import moment, {Moment} from 'moment';
+import {StyleSheet, Text, View} from 'react-native';
+import * as stub from "../data/Stub/stub"
+import Weather from "../modele/Weather";
 
 type RecupDataProps = {
   jour : string;
@@ -62,7 +62,7 @@ export function RecupDataDayWeather(props : RecupDataProps) : {[key : string] : 
  */
 export default function DayWeather({ jour, ville }: { jour: string, ville: string }) {
 const tempData : {[key : string] : number }= RecupDataDayWeather({jour, ville});
-console.log("DayWeather", tempData)
+//console.log("DayWeather", tempData)
 
   return (
     <View style={dayWeatherStyle.container}> 

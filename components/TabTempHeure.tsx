@@ -1,11 +1,6 @@
-import React, { Component } from "react";
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
-import { Float } from "react-native/Libraries/Types/CodegenTypes";
-import {WEATHER_DATA} from "../data/stub";
-import { WEATHER_DATA_Lyon_D1 } from "../data/stubLyon";
+import React from "react";
+import {ScrollView, StyleSheet, View} from 'react-native';
 import TempHeure from "./TempHeure";
-import Weather from "../class/Weather";
-import moment, { Moment } from 'moment';
 
 /**
  * Fonction qui réalise la vue de la météo de la journée à partir d'un ville précise
@@ -20,21 +15,31 @@ export default function TabTempHeure(villeActuel : any) {
 
   return (
     <View style={TabTempHeureStyle.container}> 
-      <ScrollView horizontal={true}> 
+      <ScrollView horizontal={true}>
         {heureDay.map((heure, index)=>
             <TempHeure key={index} ville={villeActuel} jour="2023-01-28" heure={heure}/>
         )}
-    </ScrollView>
+      </ScrollView>
     </View>
   );
 };
   
 const TabTempHeureStyle = StyleSheet.create({
     container : {
-      alignItems : 'center',
-      justifyContent : 'center',
-      display: "flex",
-      margin: 10,
-    }   
+        justifyContent : 'center',
+        alignItems: 'baseline',
+        display: "flex",
+        margin: 10,
+        borderColor : 'black',
+        borderTopWidth: 5,
+        borderBottomWidth: 5,
+        borderEndWidth: 2.5,
+        borderStartWidth: 2.5,
+        borderRadius: 5,
+    },
+    ScrollView : {
+        borderColor: 'black',
+    },
+    
   });
 

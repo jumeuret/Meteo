@@ -1,6 +1,5 @@
-import React, { Component } from "react";
-import { StyleSheet, ScrollView } from 'react-native';
-import { Float } from "react-native/Libraries/Types/CodegenTypes";
+import React from "react";
+import {ScrollView, StyleSheet} from 'react-native';
 import DayWeather from "./DayWeather";
 
 /**
@@ -22,10 +21,10 @@ export default function Semaine(villeActuel : any) {
   
 const semaineStyle = StyleSheet.create({
     container : {
-      flex : 1,
-      marginTop: 10,
-      padding : 10,
-      alignItems : "center"
+        flex : 1,
+        alignItems : "center",
+        borderWidth: 2.5,
+        borderRadius: 5,
     }
   });
 
