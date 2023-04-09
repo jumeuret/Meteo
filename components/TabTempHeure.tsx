@@ -11,7 +11,7 @@ import moment, { Moment } from 'moment';
  * Fonction qui réalise la vue de la météo de la journée à partir d'un ville précise
  * @returns une srollview qui, pour une ville, retourne pour chaque heure la vue du composant TempHeure
  */
-export default function TabTempHeure() {
+export default function TabTempHeure(villeActuel : any) {
   const tempHeures:Array<number> = new Array(7);
   const heureDay : string[] = []
   for( var i=0; i<24; i++){
@@ -22,7 +22,7 @@ export default function TabTempHeure() {
     <View style={TabTempHeureStyle.container}> 
       <ScrollView horizontal={true}> 
         {heureDay.map((heure, index)=>
-            <TempHeure key={index} ville="paris" jour="2023-01-28" heure={heure}/>
+            <TempHeure key={index} ville={villeActuel} jour="2023-01-28" heure={heure}/>
         )}
     </ScrollView>
     </View>

@@ -1,12 +1,24 @@
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import TabTempHeure from "../components/TabTempHeure";
 import Semaine from "../components/Semaine";
+import {SearchBar} from "../components/SearchBar";
+
 
 export default function HomeScreen() {
+
+  const [searchVille , setSearchVille] = useState<string>(null);
+
+  const handleSearchVille = (value: string) => {
+      setSearchVille(value);
+};
+
   return (
     <View style={stylesHome.container}>
-      <TabTempHeure/>
-      <Semaine/>
+
+      <Text> "Paris"</Text>
+      <SearchBar ville={searchVille ?? "Paris"} setSelected={handleSearchVille}/>
+      <TabTempHeure ville="Paris"/>
+      <Semaine ville="Paris"/>
     </View>
   )
 };
@@ -14,7 +26,6 @@ export default function HomeScreen() {
 const stylesHome = StyleSheet.create({
     container: {
       flex: 1,
-      
     },
     centered: {
       alignItems: "center"
@@ -23,4 +34,8 @@ const stylesHome = StyleSheet.create({
       fontSize: 20
     }
   });
+
+function useState<T>(arg0: null): [any, any] {
+  throw new Error('Function not implemented.');
+}
 
